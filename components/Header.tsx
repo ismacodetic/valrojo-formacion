@@ -9,8 +9,13 @@ export default function Header() {
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       <nav className="container-custom flex justify-between items-center py-4">
-        <Link href="/" className="text-2xl font-bold text-primary-600">
-          Valrojo Formación
+        <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition">
+          <img 
+            src="/images/logo.png" 
+            alt="Valrojo Formación - Logo"
+            className="h-12 w-auto"
+          />
+          <span className="text-xl font-bold text-primary-600 hidden sm:inline">Valrojo Formación</span>
         </Link>
 
         <button
