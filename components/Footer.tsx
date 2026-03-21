@@ -56,4 +56,4 @@ export default function Footer() {
   )
 }
 
-import Financiacion from './Financiacion'
+import Financiacion from './Financiation'
