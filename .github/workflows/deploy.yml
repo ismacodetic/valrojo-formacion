@@ -11,17 +11,13 @@ jobs:
     permissions:
       contents: write
 
-    strategy:
-      matrix:
-        node-version: [18.x]
-    
     steps:
     - uses: actions/checkout@v3
     
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 18.x
         cache: 'npm'
     
     - name: Install dependencies
@@ -32,12 +28,16 @@ jobs:
       env:
         NODE_ENV: production
     
-    - name: Verify build output
-      run: ls -la out/
+    - name: Configure git
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
     
     - name: Deploy to gh-pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./out
-        force_orphan: true
+      run: |
+        git checkout --orphan gh-pages
+        git rm -rf .
+        cp -r out/* .
+        git add .
+        git commit -m "Deploy to GitHub Pages" || true
+        git push -f origin gh-pages
