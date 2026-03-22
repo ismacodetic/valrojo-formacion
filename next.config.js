@@ -2,6 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
+  basePath: '/valrojo-formacion',
+  assetPrefix: '/valrojo-formacion/',
   images: {
     unoptimized: true,
   },
