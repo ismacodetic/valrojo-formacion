@@ -31,6 +31,8 @@ jobs:
     
     - name: Build
       run: npm run build
+      env:
+        NODE_ENV: production
     
     - name: Copy .nojekyll
       run: cp .nojekyll out/.nojekyll
