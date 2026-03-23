@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+import logo from '@/public/images/logo.png'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -10,9 +12,11 @@ export default function Header() {
     <header className="bg-white shadow-md sticky top-0 z-50">
       <nav className="container-custom flex justify-between items-center py-4">
         <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition">
-          <img 
-            src="/images/logo.png" 
+          <Image 
+            src={logo}
             alt="Valrojo Formación - Logo"
+            width={48}
+            height={48}
             className="h-12 w-auto"
           />
           <span className="text-xl font-bold text-primary-600 hidden sm:inline">Valrojo Formación</span>

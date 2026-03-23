@@ -1,3 +1,6 @@
+import Image from 'next/image'
+import financiacion from '@/public/images/financiacion.jpg'
+
 export default function Financiacion() {
   return (
     <div className="bg-primary-50 border-t-2 border-primary-200 py-8">
@@ -8,8 +11,8 @@ export default function Financiacion() {
           </p>
         </div>
         <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-          <img 
-            src="/images/financiacion.jpg" 
+          <Image 
+            src={financiacion}
             alt="Financiación - Gobierno de España y Fondos Next Generation UE"
             className="h-auto w-full max-w-2xl"
           />
