@@ -131,7 +131,7 @@ export default function Courses() {
       <div className="container-custom">
         <h2 className="section-title">Nuestros Cursos</h2>
 
-        <div className="mb-16">
+        <div className="mb-16" id="cursos-basicos">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Cursos Básicos</h3>
           <div className="grid md:grid-cols-3 gap-6">
             {basicCourses.map(course => (
@@ -140,7 +140,7 @@ export default function Courses() {
           </div>
         </div>
 
-        <div className="mb-16">
+        <div className="mb-16" id="cursos-avanzados">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Cursos Avanzados</h3>
           <div className="grid md:grid-cols-3 gap-6">
             {advancedCourses.map(course => (
@@ -149,7 +149,7 @@ export default function Courses() {
           </div>
         </div>
 
-        <div>
+        <div id="charlas-talleres">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Charlas y Talleres</h3>
           <div className="grid md:grid-cols-3 gap-6">
             {workshops.map(course => (

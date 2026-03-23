@@ -24,9 +24,9 @@ export default function Footer() {
             <div>
               <h4 className="font-semibold mb-4">Categorías</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition">Cursos Básicos</a></li>
-                <li><a href="#" className="hover:text-white transition">Cursos Avanzados</a></li>
-                <li><a href="#" className="hover:text-white transition">Charlas y Talleres</a></li>
+                <li><a href="#cursos-basicos" className="hover:text-white transition">Cursos Básicos</a></li>
+                <li><a href="#cursos-avanzados" className="hover:text-white transition">Cursos Avanzados</a></li>
+                <li><a href="#charlas-talleres" className="hover:text-white transition">Charlas y Talleres</a></li>
               </ul>
             </div>
             <div>

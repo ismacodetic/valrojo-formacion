@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import fondo from '@/public/images/fondo.jpg'
 
 export default function Hero() {
@@ -27,12 +28,12 @@ export default function Hero() {
           Desde lo básico hasta lo avanzado en tecnologías digitales.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="btn-primary bg-white text-primary-600 hover:bg-gray-100">
+          <Link href="#cursos" className="btn-primary bg-white text-primary-600 hover:bg-gray-100 inline-block">
             Explorar Cursos
-          </button>
-          <button className="btn-secondary border-white text-white hover:bg-white/20">
+          </Link>
+          <Link href="#contacto" className="btn-secondary border-white text-white hover:bg-white/20 inline-block">
             Más Información
-          </button>
+          </Link>
         </div>
       </div>
     </section>
