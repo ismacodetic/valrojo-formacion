@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import fondo from '@/public/images/fondo.jpg'
+import fondo from '@/public/images/fondo.webp'
 
 export default function Hero() {
   return (

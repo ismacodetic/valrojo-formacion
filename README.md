@@ -23,8 +23,9 @@ Página web moderna y profesional para Valrojo Formación, una academia que ofre
 1. **Inicio** - Hero principal con call-to-action
 2. **Sobre Nosotros** - Información de la academia y estadísticas
 3. **Cursos** - Catálogo completo de cursos organizados por nivel
-4. **Contacto** - Formulario de contacto e información de localización
-5. **Footer** - Enlaces de navegación y redes sociales
+4. **Financiación** - Opciones de financiación disponibles
+5. **Contacto** - Formulario de contacto con mapa de localización
+6. **Footer** - Enlaces de navegación y redes sociales
 
 ## Instalación
 
@@ -64,7 +65,7 @@ npm run build
 npm start
 
 # Validar código
-npm lint
+npm run lint
 ```
 
 ## Estructura del Proyecto
@@ -74,15 +75,21 @@ valrojo-formacion/
 ├── app/
 │   ├── layout.tsx          # Layout principal
 │   ├── page.tsx            # Página de inicio
-│   └── globals.css         # Estilos globales
+│   ├── globals.css         # Estilos globales
+│   ├── robots.ts           # Reglas para crawlers (SEO)
+│   └── sitemap.ts          # Sitemap dinámico (SEO)
 ├── components/
 │   ├── Header.tsx          # Navegación
 │   ├── Hero.tsx            # Sección principal
 │   ├── About.tsx           # Sobre nosotros
 │   ├── Courses.tsx         # Catálogo de cursos
+│   ├── Financiation.tsx    # Opciones de financiación
+│   ├── Map.tsx             # Mapa de localización
 │   ├── Contact.tsx         # Formulario de contacto
 │   └── Footer.tsx          # Pie de página
-├── public/                 # Archivos estáticos
+├── public/
+│   ├── CNAME               # Dominio personalizado (GitHub Pages)
+│   └── images/             # Imágenes estáticas
 ├── package.json            # Dependencias
 ├── tailwind.config.js      # Configuración de Tailwind CSS
 ├── tsconfig.json           # Configuración de TypeScript
@@ -91,11 +98,24 @@ valrojo-formacion/
 
 ## Tecnologías Utilizadas
 
-- **Next.js 14** - Framework React moderno
+- **Next.js 14** - Framework React con exportación estática
 - **React 18** - Librería de UI
-- **TypeScript** - Tipado estático
-- **Tailwind CSS** - Framework de CSS utilitario
+- **TypeScript 5** - Tipado estático
+- **Tailwind CSS 3** - Framework de CSS utilitario
 - **PostCSS** - Procesador de CSS
+- **cross-env** - Variables de entorno multiplataforma (build)
+
+## Despliegue
+
+El sitio se publica como sitio estático en **GitHub Pages** con dominio personalizado.
+
+- `next build` genera la carpeta `out/` con el HTML/CSS/JS estático (`output: 'export'`)
+- El archivo `public/CNAME` apunta al dominio `valrojoformacion.es`
+- El archivo `.nojekyll` evita que GitHub Pages procese las carpetas con guion bajo de Next.js
+
+```bash
+npm run build   # genera out/ listo para desplegar
+```
 
 ## Personalización
 

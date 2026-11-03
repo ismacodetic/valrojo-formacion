@@ -12,7 +12,7 @@ const jsonLd = {
   description:
     'Academia de formación presencial y a distancia especializada en tecnologías digitales: herramientas digitales básicas, Photoshop, fotografía, diseño web, impresión 3D y fotogrametría con drones.',
   url: 'https://valrojoformacion.es',
-  logo: 'https://valrojoformacion.es/images/logo.png',
+  logo: 'https://valrojoformacion.es/images/logo.webp',
   image: 'https://valrojoformacion.es/images/og-image.jpg',
   telephone: '+34645835353',
   email: 'info@valrojoformacion.com',
