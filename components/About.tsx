@@ -7,13 +7,13 @@ export default function About() {
       <div className="container-custom">
         <h2 className="section-title">Sobre Nosotros</h2>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          <div className="relative w-full h-64 md:h-full min-h-[400px] rounded-lg overflow-hidden shadow-md">
+        <div className="space-y-10">
+          <div className="w-full rounded-lg overflow-hidden shadow-md">
             <Image
               src={fachada}
               alt="Fachada de la Academia de Formación Valrojo"
-              fill
-              className="object-cover object-left"
+              sizes="(min-width: 1280px) 1200px, 100vw"
+              className="w-full h-auto"
             />
           </div>
 
