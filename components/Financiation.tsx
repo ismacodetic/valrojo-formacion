@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import financiacion from '@/public/images/financiacion.jpg'
+import financiacion from '@/public/images/financiacion.webp'
 
 export default function Financiacion() {
   return (
