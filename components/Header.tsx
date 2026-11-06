@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from '@/public/images/logo.webp'
+import logoUe from '@/public/images/logo-ue.webp'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -37,6 +38,17 @@ export default function Header() {
             <Link href="#sobre" className="text-gray-700 hover:text-primary-600 transition">Sobre Nosotros</Link>
             <Link href="#cursos" className="text-gray-700 hover:text-primary-600 transition">Cursos</Link>
             <Link href="#contacto" className="text-gray-700 hover:text-primary-600 transition">Contacto</Link>
+            <Link
+              href="/ayudas/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ayudas (se abre en una nueva ventana)"
+              title="Ayudas"
+              className="flex items-center gap-2 text-gray-700 hover:text-primary-600 transition"
+            >
+              <Image src={logoUe} alt="Unión Europea - Ayudas" className="h-8 w-auto" />
+              <span>Ayudas</span>
+            </Link>
           </div>
         </div>
       </nav>
