@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import Footer from '@/components/Footer'
 import logoUe from '@/public/images/logo-ue.webp'
 
 const PDF_URL = '/docs/Creacion_Empresas_Academia_Formacion_Valrojo.pdf'
@@ -69,6 +70,7 @@ export default function Ayudas() {
           </div>
         </div>
       </div>
+      <Footer />
     </main>
   )
 }

@@ -40,9 +40,7 @@ export default function Header() {
             <Link href="#contacto" className="text-gray-700 hover:text-primary-600 transition">Contacto</Link>
             <Link
               href="/ayudas/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Ayudas (se abre en una nueva ventana)"
+              aria-label="Ayudas"
               title="Ayudas"
               className="flex items-center gap-2 text-gray-700 hover:text-primary-600 transition"
             >
